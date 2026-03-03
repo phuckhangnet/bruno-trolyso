@@ -1,0 +1,42 @@
+name: TroLySoDev
+variables:
+  - name: token
+    value: '""'
+  - name: url
+    value: http://localhost:5215/api/v2
+  - name: url_old
+    value: http://localhost:5215/api
+  - name: apiKey
+    value: pkn
+  - name: pa_client_id
+    value: '"ffbe0784-bf40-4355-8db5-95c98bcd975d"'
+  - name: pa_client_secret
+    value: '"bb9f25325443f4501b672f64ce2a400a508c70ac"'
+  - name: pa_access_token
+    value: <JSON_WEB_TOKEN>8CmJ_hxwgus_e3jdHsoPWmNv7f5ODH5b35rZLoT2Wrx772K3XjjMdaPI8q1RH7cZEZYaZ1kAYZlHI1PUM0DAmUJx86iQ9Ry5oO-D5D7P-gyN5o0VUr2oiih1Kg76gxb_TJxOD8DwPwESW-f0a241LBp5_sBwXgToyrZWkJ3H3CydUx4gpAf3E--xyuJ3fvtohpjF0DeNyHVENYSJ857Poqtt8H0U_wF6Dtm9YY
+  - name: pa_server
+    value: https://cphoadonuat.hoadon30s.vn
+  - name: userIdLogin
+    value: "null"
+  - name: idCuaHang
+    value: "null"
+  - name: dateTimeNow
+    value: ""
+  - name: ghtk_API_TOKEN
+    value: 0c977030ce39b0ce15b13274be343c196d1f3bc3
+  - name: ghtk_PARTNER_CODE
+    value: S23073586
+  - name: ghtk_URL
+    value: https://services-staging.ghtklab.com
+  - name: tokenAPITinhThanh
+    value: hvn_g3h1aSSfntdostuLvPLUJGjlvGKO1zMI
+  - name: idKhachHang
+    value: "1220"
+  - name: ghn_url
+    value: https://dev-online-gateway.ghn.vn
+  - name: ghn_token
+    value: ""
+  - name: ghn_client_id
+    value: "2511035"
+  - name: ghn_shop_id
+    value: "199329"
