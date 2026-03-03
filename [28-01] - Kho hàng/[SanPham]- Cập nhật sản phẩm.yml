@@ -1,0 +1,107 @@
+info:
+  name: "[SanPham]- Cập nhật sản phẩm"
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{url}}/SanPham/CapNhat/1611"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+    - name: userIdLogin
+      value: "{{userIdLogin}}"
+    - name: idCuaHang
+      value: "{{idCuaHang}}"
+  body:
+    type: multipart-form
+    data:
+      - name: TenSanPham
+        type: text
+        value: Kẹo mút Chupa Chup
+      - name: SoThangBaoHanh
+        type: text
+        value: "24"
+        disabled: true
+      - name: SoLuong
+        type: text
+        value: "10"
+        disabled: true
+      - name: KhoiLuong
+        type: text
+        value: "10"
+        disabled: true
+      - name: ChieuDai
+        type: text
+        value: "10"
+        disabled: true
+      - name: ChieuRong
+        type: text
+        value: "10"
+        disabled: true
+      - name: ChieuCao
+        type: text
+        value: "10"
+        disabled: true
+      - name: LaGiaLienHe
+        type: text
+        value: "false"
+        disabled: true
+      - name: LaBanTrucTuyen
+        type: text
+        value: "true"
+        disabled: true
+      - name: PhanTramGiamGia
+        type: text
+        value: "0"
+        disabled: true
+      - name: MoTaNgan
+        type: text
+        value: San pham da mo ta ngan
+        disabled: true
+      - name: MoTaChiTiet
+        type: text
+        value: San pham da mo ta chi tiet
+        disabled: true
+      - name: IdNhomHang
+        type: text
+        value: "2"
+        disabled: true
+      - name: Image1
+        type: file
+        value:
+          - /Users/hauphvn/Desktop/SP_00020.jpeg
+        disabled: true
+      - name: Image2
+        type: file
+        value:
+          - postman-cloud:///1f0d0c97-07b5-4460-9c03-def7f93dd589
+        disabled: true
+      - name: Image3
+        type: file
+        value:
+          - postman-cloud:///1f00c6c1-216a-42c0-8efa-9453d804d894
+        disabled: true
+      - name: Image4
+        type: file
+        value: []
+        disabled: true
+      - name: Image5
+        type: file
+        value: []
+        disabled: true
+      - name: GiaNhap
+        type: text
+        value: "100000"
+        disabled: true
+      - name: GiaBan
+        type: text
+        value: "120000"
+        disabled: true
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

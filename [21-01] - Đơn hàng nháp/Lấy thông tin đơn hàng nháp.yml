@@ -1,0 +1,113 @@
+info:
+  name: Lấy thông tin đơn hàng nháp
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{url}}/DonHangNhap/LayDanhSachDonHangNhap"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+    - name: userIdLogin
+      value: "{{userIdLogin}}"
+    - name: idCuaHang
+      value: "{{idCuaHang}}"
+  body:
+    type: json
+    data: |-
+      {
+          "TuNgay":"2026-01-01",
+          "DenNgay":"2026-01-21"
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Get by Store id and employee id
+    request:
+      url: "{{url}}/DraftOrder/GetByStoreIdAndEmployeeId?storeId=0&employeeId=12"
+      method: GET
+      headers:
+        - name: x-api-key
+          value: "{{apiKey}}"
+      params:
+        - name: storeId
+          value: "0"
+          type: query
+        - name: employeeId
+          value: "12"
+          type: query
+      body:
+        type: json
+        data: ""
+    response:
+      statusText: "200"
+      headers:
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Date
+          value: Tue, 19 Nov 2024 09:35:06 GMT
+        - name: Server
+          value: Microsoft-IIS/10.0
+        - name: Content-Encoding
+          value: gzip
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Vary
+          value: Accept-Encoding
+        - name: Request-Context
+          value: appId=cid-v1:7b29a27b-1ca8-4676-9588-932f5c4495e1
+        - name: X-Powered-By
+          value: ASP.NET
+      body:
+        type: json
+        data: |-
+          {
+              "message": "Get draft order successfully",
+              "metadata": [
+                  {
+                      "Id": 19,
+                      "IdCuaHang": 0,
+                      "IdNguoiTaoDon": 12,
+                      "NoiDung": "{\ndff\"donhanglienhe\": 1,\n\"dienthoai\": \"091430n",
+                      "NgayTao": "2024-10-24T17:45:51.867"
+                  },
+                  {
+                      "Id": 20,
+                      "IdCuaHang": 0,
+                      "IdNguoiTaoDon": 12,
+                      "NoiDung": "{\ndff\"donhanglienhe\": 1,\n\"dienthoai\": \"091430n",
+                      "NgayTao": "2024-10-24T17:45:53.097"
+                  },
+                  {
+                      "Id": 21,
+                      "IdCuaHang": 0,
+                      "IdNguoiTaoDon": 12,
+                      "NoiDung": "{\ndff\"donhanglienhe\": 1,\n\"dienthoai\": \"091430n",
+                      "NgayTao": "2024-10-24T17:45:53.97"
+                  },
+                  {
+                      "Id": 22,
+                      "IdCuaHang": 0,
+                      "IdNguoiTaoDon": 12,
+                      "NoiDung": "{\ndff\"donhanglienhe\": 1,\n\"dienthoai\": \"091430n",
+                      "NgayTao": "2024-10-24T17:45:54.69"
+                  },
+                  {
+                      "Id": 30,
+                      "IdCuaHang": 0,
+                      "IdNguoiTaoDon": 12,
+                      "NoiDung": "{\ndff\"donhanglienhe\": 1,\n\"dienthoai\": \"091430n",
+                      "NgayTao": "2024-10-25T10:18:47.967"
+                  }
+              ],
+              "statusCodes": 200
+          }

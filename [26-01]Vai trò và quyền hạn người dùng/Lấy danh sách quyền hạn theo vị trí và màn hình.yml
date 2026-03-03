@@ -1,0 +1,29 @@
+info:
+  name: Lấy danh sách quyền hạn theo vị trí và màn hình
+  type: http
+  seq: 8
+
+http:
+  method: POST
+  url: "{{url}}/QuyenHan/VaiTroNhanVien/LayDanhSachQuyenHanTheoViTriVaManHinh"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+    - name: userIdLogin
+      value: "{{userIdLogin}}"
+    - name: idCuaHang
+      value: "{{idCuaHang}}"
+  body:
+    type: json
+    data: |
+      {
+          "MaManHinh":"sale_dashboard",
+          "MaViTri":"nhan_vien_ke_toan"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

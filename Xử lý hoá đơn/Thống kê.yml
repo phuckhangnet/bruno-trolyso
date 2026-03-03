@@ -1,0 +1,31 @@
+info:
+  name: Thống kê
+  type: http
+  seq: 7
+
+http:
+  method: POST
+  url: "{{url}}/DataManagement/GetOrderInvoiceStatistics"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+    - name: userIdLogin
+      value: "{{userIdLogin}}"
+    - name: idCuaHang
+      value: "{{idCuaHang}}"
+  body:
+    type: json
+    data: |-
+      {
+          "FromDate": "2026-01-19",
+          "ToDate": "2026-01-19"
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

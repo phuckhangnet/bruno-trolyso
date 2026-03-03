@@ -1,0 +1,29 @@
+info:
+  name: Thông tin hoá đơn
+  type: http
+  seq: 14
+
+http:
+  method: POST
+  url: "{{url}}/DataManagement/GetInvoiceInfoByOrderId"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+    - name: userIdLogin
+      value: "{{userIdLogin}}"
+    - name: idCuaHang
+      value: "{{idCuaHang}}"
+  body:
+    type: json
+    data: |-
+      {
+          "IdDonHang": 4260}
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

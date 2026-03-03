@@ -1,0 +1,24 @@
+name: MiniAppTroLyTest
+variables:
+  - name: token
+    value: ""
+  - name: url
+    value: https://apitesttrolyso.ngoanthachviet.com/api/v2
+  - name: url_old
+    value: https://apitesttrolyso.ngoanthachviet.com/api
+  - name: apiKey
+    value: pkn
+  - name: url_temp
+    value: https://apipkg.onrender.com/api/v2
+  - name: userIdLogin
+    value: "-1"
+  - name: idCuaHang
+    value: "-1"
+  - name: url_render
+    value: ""
+  - name: dateTimeNow
+    value: '""'
+  - name: idKhachHang
+    value: "1220"
+  - name: urlHub
+    value: https://apitesttrolyso.ngoanthachviet.com

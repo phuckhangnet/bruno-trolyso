@@ -1,0 +1,37 @@
+info:
+  name: Chuyển đơn hàng cho đơn vị khác
+  type: http
+  seq: 13
+
+http:
+  method: POST
+  url: "{{url}}/DonHang/ChuyenDon/Khac/4447"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+    - name: userIdLogin
+      value: "{{userIdLogin}}"
+    - name: idCuaHang
+      value: "{{idCuaHang}}"
+  body:
+    type: json
+    data: |-
+      {
+          "idNhaVanChuyen": 17,
+          "ngayGiaoHang": "2026-02-05",
+          "shopTraPhiShip":true, // default: false
+          "hangDeVo":false, // default: false
+          "phiGiaoHang":0,
+          "khoiLuong":5, // gam
+          "tienThuHo": 550000,
+          "triGiaKhaiGia": 500000,
+          "ghiChu": "Cho khách xem hàng, gọi điện trước khi giao"
+
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

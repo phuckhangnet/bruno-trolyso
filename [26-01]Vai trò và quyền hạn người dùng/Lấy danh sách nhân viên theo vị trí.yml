@@ -1,0 +1,28 @@
+info:
+  name: Lấy danh sách nhân viên theo vị trí
+  type: http
+  seq: 10
+
+http:
+  method: POST
+  url: "{{url}}/QuyenHan/VaiTroNhanVien/LayDanhSachNhanVienTheoViTri"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+    - name: userIdLogin
+      value: "{{userIdLogin}}"
+    - name: idCuaHang
+      value: "{{idCuaHang}}"
+  body:
+    type: json
+    data: |-
+      {
+          "MaViTri":"nhan_vien_ke_toan"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

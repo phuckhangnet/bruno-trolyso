@@ -1,0 +1,7 @@
+info:
+  name: "[29/01] - Bán hàng"
+  type: folder
+  seq: 14
+
+request:
+  auth: inherit

@@ -1,0 +1,27 @@
+info:
+  name: Xoá dịch vụ
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{url}}/DichVuDonHang/XoaDichVu/1"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+    - name: userIdLogin
+      value: "{{userIdLogin}}"
+    - name: idCuaHang
+      value: "{{idCuaHang}}"
+  body:
+    type: json
+    data: ""
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,7 @@
+info:
+  name: "[05/02] Báo cáo"
+  type: folder
+  seq: 20
+
+request:
+  auth: inherit

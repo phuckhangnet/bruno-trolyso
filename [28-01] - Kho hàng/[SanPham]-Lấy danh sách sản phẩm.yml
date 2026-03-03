@@ -1,0 +1,32 @@
+info:
+  name: "[SanPham]-Lấy danh sách sản phẩm"
+  type: http
+  seq: 8
+
+http:
+  method: POST
+  url: "{{url}}/SanPham/LayDanhSachSanPhamTheoCuaHang"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+    - name: userIdLogin
+      value: "{{userIdLogin}}"
+    - name: idCuaHang
+      value: "{{idCuaHang}}"
+  body:
+    type: json
+    data: |-
+      {
+          "SearchText":"",
+          "IdNhomHang":22,
+          "SoLuongNhoHon": null,
+          "PageIndex":1,
+          "PageSize": 10
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

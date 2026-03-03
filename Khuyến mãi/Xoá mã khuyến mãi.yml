@@ -1,0 +1,27 @@
+info:
+  name: Xoá mã khuyến mãi
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{url}}/KhuyenMai/MaKhuyenMai/Xoa/4"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+    - name: userIdLogin
+      value: "{{userIdLogin}}"
+    - name: idCuaHang
+      value: "{{idCuaHang}}"
+  body:
+    type: json
+    data: ""
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

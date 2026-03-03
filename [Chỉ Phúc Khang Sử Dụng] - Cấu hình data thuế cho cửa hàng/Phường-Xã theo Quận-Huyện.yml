@@ -1,0 +1,21 @@
+info:
+  name: Phường/Xã theo Quận/Huyện
+  type: http
+  seq: 6
+
+http:
+  method: GET
+  url: https://tinhthanhpho.com/api/v1/districts/778/wards?limit=100
+  params:
+    - name: limit
+      value: "100"
+      type: query
+  auth:
+    type: bearer
+    token: "{{tokenAPITinhThanh}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

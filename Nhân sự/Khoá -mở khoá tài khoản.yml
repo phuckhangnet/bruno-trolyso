@@ -1,0 +1,30 @@
+info:
+  name: Khoá /mở khoá tài khoản
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{url}}/Employee/LockUnlockEmployee/60"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+    - name: userIdLogin
+      value: "{{userIdLogin}}"
+    - name: idCuaHang
+      value: "{{idCuaHang}}"
+  body:
+    type: json
+    data: |-
+      {
+        "IsLock": true // true | false
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

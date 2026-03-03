@@ -1,0 +1,31 @@
+info:
+  name: GHTK - Lấy thông tin đia chỉ cấp 4
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{url}}/DonHang/GHTK/LayThongTinDiaChiCap4"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+    - name: userIdLogin
+      value: "{{userIdLogin}}"
+    - name: idCuaHang
+      value: "{{idCuaHang}}"
+  body:
+    type: json
+    data: |
+      {
+          "ZipCode":"Tân thuận tây, Q. 7, TP. Hồ Chí Minh"
+      }
+      // 775
+      // mua 
+      // 575
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,21 @@
+info:
+  name: Tỉnh/Thành phố (Cấu trúc cũ (Trước 1/7/2025))
+  type: http
+  seq: 8
+
+http:
+  method: GET
+  url: https://tinhthanhpho.com/api/v1/provinces?limit=100
+  params:
+    - name: limit
+      value: "100"
+      type: query
+  auth:
+    type: bearer
+    token: "{{tokenAPITinhThanh}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

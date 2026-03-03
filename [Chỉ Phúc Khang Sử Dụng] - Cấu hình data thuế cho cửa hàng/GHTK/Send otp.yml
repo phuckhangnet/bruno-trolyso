@@ -1,0 +1,31 @@
+info:
+  name: Send otp
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: https://web-staging.ghtklab.com/api/v1/register-shop/send-otp
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+      disabled: true
+    - name: userIdLogin
+      value: "{{userIdLogin}}"
+      disabled: true
+    - name: idCuaHang
+      value: "{{idCuaHang}}"
+      disabled: true
+  body:
+    type: multipart-form
+    data:
+      - name: action
+        type: text
+        value: confirm_tel
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

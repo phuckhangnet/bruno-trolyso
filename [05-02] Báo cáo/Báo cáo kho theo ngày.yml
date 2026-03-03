@@ -1,0 +1,41 @@
+info:
+  name: Báo cáo kho theo ngày
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{url}}/BaoCao/BaoCaoKhoHangTheoNgay"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+    - name: userIdLogin
+      value: "{{userIdLogin}}"
+    - name: idCuaHang
+      value: "{{idCuaHang}}"
+  params:
+    - name: idCuaHang
+      value: "{{idCuaHang}}"
+      type: query
+      disabled: true
+    - name: userIdLogin
+      value: "{{userIdLogin}}"
+      type: query
+      disabled: true
+  body:
+    type: json
+    data: |-
+      {
+        "tuNgay": "2026-01-01",
+        "denNgay": "2026-12-30"
+
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

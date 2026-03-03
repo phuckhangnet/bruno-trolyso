@@ -1,0 +1,25 @@
+info:
+  name: Lấy danh sách nhân viên theo ID
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{url}}/Employee/GetEmployeeById/60"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+    - name: userIdLogin
+      value: "{{userIdLogin}}"
+    - name: idCuaHang
+      value: "{{idCuaHang}}"
+  body:
+    type: json
+    data: ""
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

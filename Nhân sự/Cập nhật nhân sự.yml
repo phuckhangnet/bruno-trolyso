@@ -1,0 +1,73 @@
+info:
+  name: Cập nhật nhân sự
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{url}}/Employee/UpdateEmployee/60"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+    - name: userIdLogin
+      value: "{{userIdLogin}}"
+    - name: idCuaHang
+      value: "{{idCuaHang}}"
+  body:
+    type: multipart-form
+    data:
+      - name: TenQuocGia
+        type: text
+        value: Việt Nam
+      - name: MaQuocGia
+        type: text
+        value: VN
+      - name: MaTinhThanh
+        type: text
+        value: "71"
+      - name: TenTinhThanh
+        type: text
+        value: Thành phố Hồ Chí Minh
+      - name: DiaChiChiTiet
+        type: text
+        value: 11 Vạn Kiếp, Bình Thạnh, Hồ Chí Minh
+      - name: MaHopDong
+        type: text
+        value: chinh_thuc
+      - name: CCCD
+        type: text
+        value: "000000000001"
+      - name: GhiChu
+        type: text
+        value: ""
+        disabled: true
+      - name: MaViTriCongViec
+        type: text
+        value: quan_tri_vien_he_thong
+        description: "NameCode: từ {{url}}/Permission/EmployeeRole/GetAll"
+      - name: MaViTriCongViec
+        type: text
+        value: nhan_vien_ke_toan
+      - name: Ho
+        type: text
+        value: Phan
+      - name: Ten
+        type: text
+        value: Nam
+      - name: DienThoai
+        type: text
+        value: "0000000003"
+      - name: Email
+        type: text
+        value: phannam@phuckhangnet.com
+      - name: GioiTinh
+        type: text
+        value: nam
+        description: nam | nữ
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

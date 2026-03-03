@@ -1,0 +1,25 @@
+info:
+  name: Docs Kết nối socket
+  type: folder
+  seq: 1
+
+request:
+  auth: inherit
+
+docs:
+  content: |-
+    **Link**: {{urlHub}}/thongbaoHub  
+    Xác thực token qua: JWT Bearer Token truyền qua Query String (`access_token`).
+
+    **Key** lắng nghe: ReceiveNotification
+
+    Các loaị sự kiện: `DON_HANG, KHACH_HANG,...(BỔ SUNG SAU)`
+
+    Trong đó:
+
+    `referenceId: id đơn hàng nếu loại là đơn hàng. tương tự các loại khác.`
+
+    Ví dụ:
+
+    `{title: 'Đơn hàng mới', message: 'Đơn hàng BILL_000000000000099 vừa được tạo mới', referenceId: 99, type: 'DON_HANG'}`
+  type: text/markdown

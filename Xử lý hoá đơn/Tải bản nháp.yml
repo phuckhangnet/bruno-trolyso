@@ -1,0 +1,30 @@
+info:
+  name: Tải bản nháp
+  type: http
+  seq: 12
+
+http:
+  method: POST
+  url: "{{url}}/DataManagement/GetInvoiceDownloadLink"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+    - name: userIdLogin
+      value: "{{userIdLogin}}"
+    - name: idCuaHang
+      value: "{{idCuaHang}}"
+  body:
+    type: json
+    data: |-
+      {
+          "IdDonHang": 4223
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

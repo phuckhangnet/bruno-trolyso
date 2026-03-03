@@ -1,0 +1,74 @@
+info:
+  name: Thêm mới khách hàng
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{url}}/KhachHang/TaoMoi"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+    - name: userIdLogin
+      value: "{{userIdLogin}}"
+    - name: idCuaHang
+      value: "{{idCuaHang}}"
+  body:
+    type: multipart-form
+    data:
+      - name: DanhXung
+        type: text
+        value: Anh
+      - name: Ten
+        type: text
+        value: K2
+      - name: Ho
+        type: text
+        value: Trần
+      - name: Email
+        type: text
+        value: ""
+        disabled: true
+      - name: DienThoai
+        type: text
+        value: "0000000007"
+      - name: DiaChiChiTiet
+        type: text
+        value: "123 Trần hưng đạo "
+      - name: NgaySinh
+        type: text
+        value: 2025-02-18
+      - name: TenQuocGia
+        type: text
+        value: Việt Nam
+      - name: MaQuocGia
+        type: text
+        value: VN
+      - name: TenTinhThanh
+        type: text
+        value: Hồ chí minh
+      - name: MaTinhThanh
+        type: text
+        value: "71"
+      - name: GhiChu
+        type: text
+        value: ""
+        disabled: true
+      - name: GioiTinh
+        type: text
+        value: Nam
+        description: "Nam | Nữ "
+      - name: MaBuuChinh
+        type: text
+        value: "P. Bình Thuận, Quận 7, Hồ Chí Minh, ZIP: 71000"
+      - name: AnhDaiDien
+        type: file
+        value:
+          - postman-cloud:///1f00c6c1-216a-42c0-8efa-9453d804d894
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

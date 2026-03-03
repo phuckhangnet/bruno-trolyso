@@ -1,0 +1,27 @@
+info:
+  name: Encode
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{url}}/ForTest/Encode"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+  body:
+    type: json
+    data: |-
+      {
+          "TokenNofitication": "TokenNofitication",
+          "DeviceId": "postman",
+          "Account": "hauphvn",
+          "Password": "751914"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

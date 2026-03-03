@@ -1,0 +1,35 @@
+info:
+  name: Lấy hoá đơn bán theo ngày
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{url}}/DataManagement/GetOrderList"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+    - name: userIdLogin
+      value: "{{userIdLogin}}"
+    - name: idCuaHang
+      value: "{{idCuaHang}}"
+  body:
+    type: json
+    data: |-
+      {
+          "SearchText": "",
+          "PageNumber": 1,
+          "PageSize": 10,
+          "Status": "", // KHONG_CHON_XUAT_HOA_DON | CHON_XUAT_HOA_DON
+          "FromDate": "2026-01-07",
+          "ToDate": "2026-01-30"
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,29 @@
+info:
+  name: "[SanPham]-Lấy ds sản phẩm theo nhóm"
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{url}}/SanPham/LayDanhSachSanPhamTheoNhom"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+    - name: userIdLogin
+      value: "{{userIdLogin}}"
+    - name: idCuaHang
+      value: "{{idCuaHang}}"
+  body:
+    type: json
+    data: |-
+      {
+          "SearchText":"",
+          "IdNhomHang":20
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

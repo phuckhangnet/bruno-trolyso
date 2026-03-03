@@ -1,0 +1,35 @@
+info:
+  name: Báo cáo so sánh
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{url}}/BaoCao/BaoCaoThamChieu"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+    - name: userIdLogin
+      value: "{{userIdLogin}}"
+    - name: idCuaHang
+      value: "{{idCuaHang}}"
+  body:
+    type: json
+    data: |-
+      {
+          "nguon": "QT202602", //NT: nam-thang, vd: nguon:'NT2023' dich: 'NT2024'
+          "dich": "QT202601",
+          "loaiSoLieu": "SP" // Chi cho phep: 'DT,DH,KH,SP,CP'
+      }
+      //NT: nam-thang, vd: nguon:'NT2023' dich: 'NT2024'
+          //NQ: quý năm vd: nguon:'NQ2023', dich: 'NQ2024'
+          //QT: quý tháng, vd: nguon: 'QT202301', dich: 'QT202402'  // Q1/2023 vs Q2/2024
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

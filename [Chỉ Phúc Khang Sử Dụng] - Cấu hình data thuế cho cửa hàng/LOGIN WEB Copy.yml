@@ -1,0 +1,32 @@
+info:
+  name: LOGIN WEB Copy
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: https://web.giaohangtietkiem.vn/api/v1/auth/login
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+      disabled: true
+    - name: userIdLogin
+      value: "{{userIdLogin}}"
+      disabled: true
+    - name: idCuaHang
+      value: "{{idCuaHang}}"
+      disabled: true
+  body:
+    type: json
+    data: |
+      {
+          "username":"hectorphvn@gmail.com",
+          "password":"Hauhau123@"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

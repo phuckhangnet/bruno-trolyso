@@ -1,0 +1,33 @@
+info:
+  name: Lấy danh sách khách hàng
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{url}}/KhachHang/LayDanhSachKhachHang"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+    - name: userIdLogin
+      value: "{{userIdLogin}}"
+    - name: idCuaHang
+      value: "{{idCuaHang}}"
+  body:
+    type: json
+    data: |-
+      {
+          "SearchText": "",
+          "Status": "ACTIVE",// LOCKED || ACTIVE
+          "PageIndex": 1,
+          "PageSize": 100,
+          "Sort":"asc" // asc | desc
+
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

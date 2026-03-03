@@ -1,0 +1,74 @@
+info:
+  name: Cập nhật khách hàng
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{url}}/KhachHang/CapNhat/1237"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+    - name: userIdLogin
+      value: "{{userIdLogin}}"
+    - name: idCuaHang
+      value: "{{idCuaHang}}"
+  body:
+    type: multipart-form
+    data:
+      - name: DanhXung
+        type: text
+        value: Anh
+      - name: Ten
+        type: text
+        value: Long 2
+      - name: Ho
+        type: text
+        value: Trần
+      - name: Email
+        type: text
+        value: ""
+        disabled: true
+      - name: DienThoai
+        type: text
+        value: "0000000005"
+        disabled: true
+      - name: DiaChiChiTiet
+        type: text
+        value: "123 Trần hưng đạo "
+      - name: NgaySinh
+        type: text
+        value: 2025-02-18
+      - name: TenQuocGia
+        type: text
+        value: Việt Nam
+      - name: MaQuocGia
+        type: text
+        value: VN
+      - name: TenTinhThanh
+        type: text
+        value: Hồ chí minh
+      - name: MaTinhThanh
+        type: text
+        value: "71"
+      - name: GhiChu
+        type: text
+        value: ""
+      - name: GioiTinh
+        type: text
+        value: Nam
+        description: "Nam | Nữ "
+      - name: MaBuuChinh
+        type: text
+        value: ""
+      - name: AnhDaiDien
+        type: file
+        value:
+          - postman-cloud:///1f0d0c97-07b5-4460-9c03-def7f93dd589
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

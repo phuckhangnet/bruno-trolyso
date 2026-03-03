@@ -1,0 +1,29 @@
+info:
+  name: Huỷ đơn hàng loạt
+  type: http
+  seq: 7
+
+http:
+  method: POST
+  url: "{{url}}/DonHang/HuyDonHang"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+    - name: userIdLogin
+      value: "{{userIdLogin}}"
+    - name: idCuaHang
+      value: "{{idCuaHang}}"
+  body:
+    type: json
+    data: |-
+      {
+          "DanhSachIdDonHang":[39],
+          "LyDoHuy":"Không có nhu cầu nữa"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

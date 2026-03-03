@@ -1,0 +1,7 @@
+info:
+  name: Mã hoá và giải mã
+  type: folder
+  seq: 2
+
+request:
+  auth: inherit

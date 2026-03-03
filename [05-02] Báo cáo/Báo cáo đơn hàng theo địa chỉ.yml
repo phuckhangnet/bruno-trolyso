@@ -1,0 +1,42 @@
+info:
+  name: Báo cáo đơn hàng theo địa chỉ
+  type: http
+  seq: 9
+
+http:
+  method: POST
+  url: "{{url}}/BaoCao/BaoCaoChiTietDonHangDiaChiTheoNgay"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+    - name: userIdLogin
+      value: "{{userIdLogin}}"
+    - name: idCuaHang
+      value: "{{idCuaHang}}"
+  params:
+    - name: ""
+      value: ""
+      type: query
+      disabled: true
+  body:
+    type: json
+    data: |
+      {
+        "tuNgay": "2026-01-01",
+        "denNgay": "2026-12-31",
+        "top": 3,
+        "quocGia": true,
+        "quanHuyen": true,
+        "trangThai": true,
+        "tinhThanh": true
+
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,43 @@
+info:
+  name: Gửi thông báo qua email
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{url}}/KhachHang/GuiThongBao/GuiThongBaoQuaEmail"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+    - name: userIdLogin
+      value: "{{userIdLogin}}"
+    - name: idCuaHang
+      value: "{{idCuaHang}}"
+  body:
+    type: json
+    data: |-
+      {
+          "Data": [
+              {
+                  "CustomerId": 1215,
+                  "CustomerEmail": "hauphvn@gmail.com",
+                  "Subject": "Hỗ trợ khiếu nại",
+                  "Content": "content1"
+              },
+              {
+                  "CustomerId": 1220,
+                  "CustomerEmail": "hectorphvn@gmail.com",
+                  "Subject": "Hỗ trợ khiếu nại",
+                  "Content": "content1"
+              }
+          ]
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

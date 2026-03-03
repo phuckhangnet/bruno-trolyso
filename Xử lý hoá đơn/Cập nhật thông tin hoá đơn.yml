@@ -1,0 +1,37 @@
+info:
+  name: Cập nhật thông tin hoá đơn
+  type: http
+  seq: 15
+
+http:
+  method: POST
+  url: "{{url}}/DataManagement/UpdateCustomerInvoiceInfo"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+    - name: userIdLogin
+      value: "{{userIdLogin}}"
+    - name: idCuaHang
+      value: "{{idCuaHang}}"
+  body:
+    type: json
+    data: |-
+      {
+          "IdDonHang": 4223,
+          "HoTenNguoiMua": "",
+          "TenCongTy": "Công Ty D 4 cap nhat",
+          "LaCongTy": true,
+          "DiaChi": "222 Trần hưng đạo 2, Cầu Kho,Hồ Chí Minh",
+          "DienThoai": "0967900801",
+          "MaSoThue": "0967900801",
+          "Email": "hauphvn@gmail.com"
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

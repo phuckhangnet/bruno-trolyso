@@ -1,0 +1,32 @@
+info:
+  name: Báo cáo kho chi tiết theo top
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{url}}/BaoCao/BaoCaoKhoHangTheoNgayChiTietTheoTop"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+    - name: userIdLogin
+      value: "{{userIdLogin}}"
+    - name: idCuaHang
+      value: "{{idCuaHang}}"
+  body:
+    type: json
+    data: |
+      {
+        "tuNgay": "2026-01-01",
+        "denNgay": "2026-12-14",
+        "top":10
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

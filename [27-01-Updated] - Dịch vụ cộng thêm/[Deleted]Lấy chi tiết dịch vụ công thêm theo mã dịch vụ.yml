@@ -1,0 +1,28 @@
+info:
+  name: "[Deleted]Lấy chi tiết dịch vụ công thêm theo mã dịch vụ"
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{url}}/DichVuCongThem/LayChiTietDichVuCongThemTheoMa"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+    - name: userIdLogin
+      value: "{{userIdLogin}}"
+    - name: idCuaHang
+      value: "{{idCuaHang}}"
+  body:
+    type: json
+    data: |-
+      {
+          "MaDichVuCongThem":"X000001"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

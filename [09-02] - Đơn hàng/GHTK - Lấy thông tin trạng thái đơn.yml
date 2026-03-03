@@ -1,0 +1,52 @@
+info:
+  name: GHTK - Lấy thông tin trạng thái đơn
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{url}}/DonHang/GHTK/TrangThaiDonHang/27"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+    - name: userIdLogin
+      value: "{{userIdLogin}}"
+    - name: idCuaHang
+      value: "{{idCuaHang}}"
+  body:
+    type: json
+    data: |-
+      {
+          
+      }
+  auth: inherit
+
+runtime:
+  scripts:
+    - type: before-request
+      code: |-
+        // Tạo đối tượng thời gian hiện tại
+        const now = new Date();
+
+        // Hàm bổ sung số 0 phía trước nếu giá trị nhỏ hơn 10 (ví dụ: 5 -> 05)
+        const pad = (n) => n < 10 ? '0' + n : n;
+
+        // Lấy các thành phần thời gian
+        const year = now.getFullYear();
+        const month = pad(now.getMonth() + 1); // Tháng trong JS bắt đầu từ 0
+        const day = pad(now.getDate());
+        const hours = pad(now.getHours());
+        const minutes = pad(now.getMinutes());
+        const seconds = pad(now.getSeconds());
+
+        // Ghép thành chuỗi định dạng: YYYY-MM-DD HH:mm:ss
+        const formattedDateTime = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+        console.log("formattedDateTime "+ formattedDateTime);
+        // Gán vào biến để sử dụng trong Body
+        bru.setVar("dateTimeNow", formattedDateTime);
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

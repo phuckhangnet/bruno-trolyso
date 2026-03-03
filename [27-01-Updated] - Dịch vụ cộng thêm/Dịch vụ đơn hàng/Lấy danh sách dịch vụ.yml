@@ -1,0 +1,27 @@
+info:
+  name: Lấy danh sách dịch vụ
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{url}}/DichVuDonHang/LayDanhSachDichVu"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+    - name: userIdLogin
+      value: "{{userIdLogin}}"
+    - name: idCuaHang
+      value: "{{idCuaHang}}"
+  body:
+    type: json
+    data: ""
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

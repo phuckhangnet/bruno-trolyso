@@ -1,0 +1,80 @@
+info:
+  name: Tạo mới
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{url}}/DonHangNhap/TaoMoi"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+    - name: userIdLogin
+      value: "{{userIdLogin}}"
+    - name: idCuaHang
+      value: "{{idCuaHang}}"
+  body:
+    type: json
+    data: |-
+      {
+        "NoiDung": "{\"sanphamdachon\":[{\"IDSanPham\":1117,\"SoLuongMua\":1,\"GiaBan\":2500000,\"GiaSauGiam\":2250000,\"ThoiGianBaoHanh\":3,\"KhoiLuong\":100,\"GiaGiamTienMat\":0,\"TiLeGiam\":0,\"MaSanPham\":\"PPK01117\",\"TenSanPham\":\"Vòng Lam Ngọc Ab1\",\"URLImage\":\"/_imageslibrary/products/1117_1.jpeg\",\"BaoHanh\":false,\"SuaChua\":false}]}"
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Tạo mới
+    request:
+      url: "{{url}}/DraftOrder/Create"
+      method: POST
+      headers:
+        - name: x-api-key
+          value: "{{apiKey}}"
+      body:
+        type: json
+        data: |-
+          {
+            "IdNguoiTaoDon": 115,
+            "IdCuaHang": 0,
+            "NoiDung": "{\"sanphamdachon\":[{\"IDSanPham\":1117,\"SoLuongMua\":1,\"GiaBan\":2500000,\"GiaSauGiam\":2250000,\"ThoiGianBaoHanh\":3,\"KhoiLuong\":100,\"GiaGiamTienMat\":0,\"TiLeGiam\":0,\"MaSanPham\":\"PPK01117\",\"TenSanPham\":\"Vòng Lam Ngọc Ab1\",\"URLImage\":\"/_imageslibrary/products/1117_1.jpeg\",\"BaoHanh\":false,\"SuaChua\":false}]}"
+          }
+    response:
+      statusText: "200"
+      headers:
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Date
+          value: Tue, 19 Nov 2024 09:34:42 GMT
+        - name: Server
+          value: Microsoft-IIS/10.0
+        - name: Content-Encoding
+          value: gzip
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Vary
+          value: Accept-Encoding
+        - name: Request-Context
+          value: appId=cid-v1:7b29a27b-1ca8-4676-9588-932f5c4495e1
+        - name: X-Powered-By
+          value: ASP.NET
+      body:
+        type: json
+        data: |-
+          {
+              "message": "Create draft order successfully",
+              "metadata": {
+                  "IdDonHangNhap": 119,
+                  "IdNguoiTaoDon": 115,
+                  "IdCuaHang": 0,
+                  "NoiDung": "{\"sanphamdachon\":[{\"IDSanPham\":1117,\"SoLuongMua\":1,\"GiaBan\":2500000,\"GiaSauGiam\":2250000,\"ThoiGianBaoHanh\":3,\"KhoiLuong\":100,\"GiaGiamTienMat\":0,\"TiLeGiam\":0,\"MaSanPham\":\"PPK01117\",\"TenSanPham\":\"Vòng Lam Ngọc Ab1\",\"URLImage\":\"/_imageslibrary/products/1117_1.jpeg\",\"BaoHanh\":false,\"SuaChua\":false}]}",
+                  "NgayTao": "2024-11-19T16:34:31.81"
+              },
+              "statusCodes": 200
+          }

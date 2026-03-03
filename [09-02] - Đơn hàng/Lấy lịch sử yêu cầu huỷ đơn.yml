@@ -1,0 +1,25 @@
+info:
+  name: Lấy lịch sử yêu cầu huỷ đơn
+  type: http
+  seq: 10
+
+http:
+  method: POST
+  url: "{{url}}/DonHang/LayLichSuYeuCauHuyDon/39"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+    - name: userIdLogin
+      value: "{{userIdLogin}}"
+    - name: idCuaHang
+      value: "{{idCuaHang}}"
+  body:
+    type: json
+    data: ""
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

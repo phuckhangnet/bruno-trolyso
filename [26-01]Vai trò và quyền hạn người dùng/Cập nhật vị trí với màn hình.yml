@@ -1,0 +1,33 @@
+info:
+  name: Cập nhật vị trí với màn hình
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{url}}/QuyenHan/VaiTroNhanVien/CapNhatViTriManHinh"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+    - name: userIdLogin
+      value: "{{userIdLogin}}"
+    - name: idCuaHang
+      value: "{{idCuaHang}}"
+  body:
+    type: json
+    data: |-
+      {
+          "DanhSachMaManHinh":[
+              "sale_dashboard",
+              "warehouse_dashboard",
+              "notification_dashboard"
+          ],
+          "MaViTri":"nhan_vien_ke_toan"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

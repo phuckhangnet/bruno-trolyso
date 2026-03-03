@@ -1,0 +1,7 @@
+info:
+  name: "[28/01] - Kho hàng"
+  type: folder
+  seq: 11
+
+request:
+  auth: inherit

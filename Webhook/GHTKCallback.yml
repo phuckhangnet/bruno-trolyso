@@ -1,0 +1,30 @@
+info:
+  name: GHTKCallback
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: http://localhost:5215/api/webhook/ghtk
+  body:
+    type: json
+    data: |-
+      {
+      "partner_id" : "1234567",
+      "label_id": "S1.A1.17373471",
+      "status_id": 5,
+      "action_time": "2016-11-02T12:18:39+07:00",
+      "reason_code": "",
+      "reason": "",
+      "weight": 2.4,
+      "fee": 15000,
+      "pick_money": 100000,
+      "return_part_package": 0
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

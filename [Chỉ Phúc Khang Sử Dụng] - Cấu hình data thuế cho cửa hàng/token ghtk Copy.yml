@@ -1,0 +1,32 @@
+info:
+  name: token ghtk Copy
+  type: http
+  seq: 5
+
+http:
+  method: GET
+  url: https://khachhang-staging.ghtklab.com/web/thong-tin-shop/tai-khoan
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+      disabled: true
+    - name: userIdLogin
+      value: "{{userIdLogin}}"
+      disabled: true
+    - name: idCuaHang
+      value: "{{idCuaHang}}"
+      disabled: true
+  body:
+    type: json
+    data: |-
+      {
+          "email":"ruby06292@gmail.com",
+          "password":"H@My1305"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

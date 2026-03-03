@@ -1,0 +1,27 @@
+info:
+  name: Lấy danh sách loại giảm giá
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{url}}/KhuyenMai/LayDanhMucLoaiKhuyenMai"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+    - name: userIdLogin
+      value: "{{userIdLogin}}"
+    - name: idCuaHang
+      value: "{{idCuaHang}}"
+  body:
+    type: json
+    data: ""
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

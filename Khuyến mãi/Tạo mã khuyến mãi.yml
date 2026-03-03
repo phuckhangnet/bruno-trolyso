@@ -1,0 +1,35 @@
+info:
+  name: Tạo mã khuyến mãi
+  type: http
+  seq: 2
+
+http:
+  method: POST
+  url: "{{url}}/KhuyenMai/TaoMaKhuyenMai"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+    - name: userIdLogin
+      value: "{{userIdLogin}}"
+    - name: idCuaHang
+      value: "{{idCuaHang}}"
+  body:
+    type: json
+    data: |-
+      {
+          "IdLoaiKhuyenMai":1,
+          "LaDungNoiBo": false,
+          "ThoiHanSuDung":"2026-12-01",
+          "SoTienGiam": 10000,
+          "PhanTramGiam": 0,
+          "SoLanSuDung":10
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

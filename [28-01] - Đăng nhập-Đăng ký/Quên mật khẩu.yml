@@ -1,0 +1,68 @@
+info:
+  name: Quên mật khẩu
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{url}}/Auth/Employee/ForgotPassword"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+  body:
+    type: json
+    data: |-
+      {
+          "TaiKhoan":"hauphvn"
+      }
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Quen mat khau
+    request:
+      url: "{{url}}/Auth/Employee/ForgotPassword"
+      method: POST
+      headers:
+        - name: x-api-key
+          value: "{{apiKey}}"
+      body:
+        type: json
+        data: |-
+          {
+              "taiKhoan":"0967900832"
+          }
+    response:
+      statusText: "200"
+      headers:
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Date
+          value: Tue, 19 Nov 2024 10:14:34 GMT
+        - name: Server
+          value: Microsoft-IIS/10.0
+        - name: Content-Encoding
+          value: gzip
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Vary
+          value: Accept-Encoding
+        - name: Request-Context
+          value: appId=cid-v1:7b29a27b-1ca8-4676-9588-932f5c4495e1
+        - name: X-Powered-By
+          value: ASP.NET
+      body:
+        type: json
+        data: |-
+          {
+              "message": "Change password and send email success",
+              "metadata": {
+                  "taiKhoan": "0967900832",
+                  "matKhauMoi": "888584"
+              },
+              "statusCodes": 200
+          }

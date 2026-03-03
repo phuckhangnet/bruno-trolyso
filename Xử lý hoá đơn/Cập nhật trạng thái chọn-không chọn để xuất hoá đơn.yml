@@ -1,0 +1,31 @@
+info:
+  name: Cập nhật trạng thái chọn/không chọn để xuất hoá đơn
+  type: http
+  seq: 9
+
+http:
+  method: POST
+  url: "{{url}}/DataManagement/UpdateOrderInvoiceSelectionStatus"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+    - name: userIdLogin
+      value: "{{userIdLogin}}"
+    - name: idCuaHang
+      value: "{{idCuaHang}}"
+  body:
+    type: json
+    data: |-
+      {
+          "OrderId":4317,
+          "NewStatus":"CHON_XUAT_HOA_DON" // KHONG_CHON_XUAT_HOA_DON | CHON_XUAT_HOA_DON
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

@@ -1,0 +1,29 @@
+info:
+  name: Lấy danh sách sản phẩm đã mua
+  type: http
+  seq: 5
+
+http:
+  method: POST
+  url: "{{url}}/KhachHang/LayDanhSachSanPhamDaMua/1233"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+    - name: userIdLogin
+      value: "{{userIdLogin}}"
+    - name: idCuaHang
+      value: "{{idCuaHang}}"
+  body:
+    type: json
+    data: |-
+      {
+          "TuNgay":"2026-01-01",
+          "DenNgay":"2026-01-30"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

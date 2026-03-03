@@ -1,0 +1,26 @@
+info:
+  name: Đặt lại mật khẩu
+  type: http
+  seq: 6
+
+http:
+  method: POST
+  url: "{{url}}/Employee/ResetPassword"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+  body:
+    type: json
+    data: |-
+      {
+          "EmployeeID":50
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

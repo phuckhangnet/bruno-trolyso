@@ -1,0 +1,31 @@
+info:
+  name: Tạo mới cấu hình API cho cửa hàng mới
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{url}}/PhucKhang/CuaHang/HoaDon/CauHinhApi"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+    - name: userIdLogin
+      value: "{{userIdLogin}}"
+    - name: idCuaHang
+      value: "{{idCuaHang}}"
+  body:
+    type: json
+    data: |-
+      {
+         "IdCuaHang":17,
+         "ClientId":"ffbe0784-bf40-4355-8db5-95c98bcd975d",
+         "ServerUrl":"https://cphoadonuat.hoadon30s.vn",
+         "ClientSecret":"bb9f25325443f4501b672f64ce2a400a508c70ac"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

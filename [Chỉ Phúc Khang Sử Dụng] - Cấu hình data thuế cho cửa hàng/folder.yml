@@ -1,0 +1,7 @@
+info:
+  name: "[Chỉ Phúc Khang Sử Dụng] - Cấu hình data thuế cho cửa hàng"
+  type: folder
+  seq: 1
+
+request:
+  auth: inherit

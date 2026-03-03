@@ -1,0 +1,31 @@
+info:
+  name: Tạo mới dịch vụ đơn hàng
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: "{{url}}/DichVuDonHang/TaoMoiDichVu"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+    - name: userIdLogin
+      value: "{{userIdLogin}}"
+    - name: idCuaHang
+      value: "{{idCuaHang}}"
+  body:
+    type: json
+    data: |-
+      {
+          "TenDichVu":"Khác",
+          "GiaTien":0
+      }
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

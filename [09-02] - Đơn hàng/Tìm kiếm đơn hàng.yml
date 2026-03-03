@@ -1,0 +1,35 @@
+info:
+  name: Tìm kiếm đơn hàng
+  type: http
+  seq: 4
+
+http:
+  method: POST
+  url: "{{url}}/DonHang/TimKiemDonHang"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+    - name: userIdLogin
+      value: "{{userIdLogin}}"
+    - name: idCuaHang
+      value: "{{idCuaHang}}"
+  body:
+    type: json
+    data: |
+      {
+          "ChuoiTimKiem": "",
+          "TuNgay": "2026-02-09",
+          "DenNgay": "2026-02-28",
+          "LoaiDonHang": "TAC_CA", // TAC_CA,DH_NHAP, DH_CHO_XAC_NHAN, DH_YEU_CAU, DH_DA_XAC_NHAN,
+          "PageIndex": 1,
+          "PageSize": 130,
+          // "TrangThaiDonHang": [] // dathang , daxacnhan, chodonggoi, dainphieumuahang, dasoandu, cholayhang, dachuyennhavanchuyen,
+          "DangDoiKetQuaYeuCau": null// true , false || null
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

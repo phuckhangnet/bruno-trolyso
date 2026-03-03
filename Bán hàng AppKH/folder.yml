@@ -1,0 +1,7 @@
+info:
+  name: Bán hàng AppKH
+  type: folder
+  seq: 15
+
+request:
+  auth: inherit

@@ -1,0 +1,48 @@
+info:
+  name: Chuyển đơn hàng cho đơn vị GHTK
+  type: http
+  seq: 12
+
+http:
+  method: POST
+  url: "{{url}}/DonHang/ChuyenDon/GHTK/27"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+    - name: userIdLogin
+      value: "{{userIdLogin}}"
+    - name: idCuaHang
+      value: "{{idCuaHang}}"
+  body:
+    type: json
+    data: |-
+      {
+          "idNhaVanChuyen": 1,
+          "diaChiCap4": "Tòa nhà PTS Saigon",
+          "khoiLuong": 900,
+          "mienShip": "0", // "1": Shop trả, "0": Khách trả
+          "ngayGiaoHang": "2026-02-05",
+          "tienThuHo": 550000,
+          "triGiaKhaiGia": 500000,
+          "ghiChu": "Cho khách xem hàng, gọi điện trước khi giao",
+          "deVo": 0,
+          "danhSachSanPham": [
+              {
+                  "name": "sp test 1",
+                  "weight": 2,
+                  "quantity": 2
+              },
+              {
+                  "name": "sf test 2",
+                  "weight": 2,
+                  "quantity": 1
+              }
+          ]
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

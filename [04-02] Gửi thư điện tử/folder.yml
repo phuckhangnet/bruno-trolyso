@@ -1,0 +1,7 @@
+info:
+  name: "[04/02] Gửi thư điện tử"
+  type: folder
+  seq: 13
+
+request:
+  auth: inherit

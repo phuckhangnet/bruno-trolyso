@@ -1,0 +1,25 @@
+info:
+  name: "[Deleted]Lấy danh sách tất cả dịch vụ công thêm"
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{url}}/DichVuCongThem/LayDanhMucLoaiDichVuCongThem"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+    - name: userIdLogin
+      value: "{{userIdLogin}}"
+    - name: idCuaHang
+      value: "{{idCuaHang}}"
+  body:
+    type: json
+    data: ""
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

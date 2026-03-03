@@ -1,0 +1,29 @@
+info:
+  name: Yêu cầu huỷ xác nhận
+  type: http
+  seq: 8
+
+http:
+  method: POST
+  url: "{{url}}/DonHang/YeuCauHuyXacNhan"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+    - name: userIdLogin
+      value: "{{userIdLogin}}"
+    - name: idCuaHang
+      value: "{{idCuaHang}}"
+  body:
+    type: json
+    data: |-
+      {
+          "DanhSachIdDonHang":[4319],
+          "LyDoHuy":"Sản phẩm lỗi"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

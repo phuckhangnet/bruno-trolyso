@@ -1,0 +1,7 @@
+info:
+  name: "[28/01] - Đăng nhập/Đăng ký"
+  type: folder
+  seq: 3
+
+request:
+  auth: inherit

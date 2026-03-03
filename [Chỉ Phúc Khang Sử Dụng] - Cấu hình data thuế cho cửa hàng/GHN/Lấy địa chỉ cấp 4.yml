@@ -1,0 +1,38 @@
+info:
+  name: Lấy địa chỉ cấp 4
+  type: http
+  seq: 1
+
+http:
+  method: GET
+  url: "{{ghn_url}}/shiip/public-api/master-data/province"
+  headers:
+    - name: Content-Type
+      value: application/json
+    - name: Token
+      value: "{{ghn_token}}"
+  params:
+    - name: ProvinceName
+      value: TP. Hồ Chí Minh
+      type: query
+      disabled: true
+    - name: district
+      value: Q. 7
+      type: query
+      disabled: true
+    - name: ward_street
+      value: Phú Thuận
+      type: query
+      disabled: true
+  body:
+    type: json
+    data: ""
+  auth:
+    type: bearer
+    token: "{{ghn_token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

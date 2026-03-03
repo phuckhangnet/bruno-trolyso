@@ -1,0 +1,28 @@
+info:
+  name: "[SanPham]-Nhập kho"
+  type: http
+  seq: 9
+
+http:
+  method: POST
+  url: "{{url}}/SanPham/NhapKho/1609"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+    - name: userIdLogin
+      value: "{{userIdLogin}}"
+    - name: idCuaHang
+      value: "{{idCuaHang}}"
+  body:
+    type: json
+    data: |-
+      {
+          "SoLuong":100
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

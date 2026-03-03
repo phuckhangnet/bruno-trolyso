@@ -1,0 +1,42 @@
+info:
+  name: Dang Ky Acc
+  type: http
+  seq: 1
+
+http:
+  method: POST
+  url: https://web-staging.ghtklab.com/api/v1/register-shop/create-register-shop
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+      disabled: true
+    - name: userIdLogin
+      value: "{{userIdLogin}}"
+      disabled: true
+    - name: idCuaHang
+      value: "{{idCuaHang}}"
+      disabled: true
+  body:
+    type: json
+    data: |-
+      {
+          "name": "pkn_test",
+          "tel": "0979610801",
+          "password": "H@My1305",
+          "confirm_password": "H@My1305",
+          "province": "TP Hồ Chí Minh",
+          "province_id": "126",
+          "district": "Phường Tân Hưng",
+          "district_id": "1026897",
+          "ward": "Phường Tân Hưng",
+          "ward_id": "1026898",
+          "hamlet": "Khu Dân Cư Him Lam",
+          "hamlet_id": "77709"
+      }
+  auth: inherit
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5

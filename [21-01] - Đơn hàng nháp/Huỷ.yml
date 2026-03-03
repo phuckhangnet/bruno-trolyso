@@ -1,0 +1,69 @@
+info:
+  name: Huỷ
+  type: http
+  seq: 3
+
+http:
+  method: POST
+  url: "{{url}}/DonHangNhap/Huy/8"
+  headers:
+    - name: x-api-key
+      value: "{{apiKey}}"
+    - name: userIdLogin
+      value: "{{userIdLogin}}"
+    - name: idCuaHang
+      value: "{{idCuaHang}}"
+  body:
+    type: json
+    data: ""
+  auth:
+    type: bearer
+    token: "{{token}}"
+
+settings:
+  encodeUrl: true
+  timeout: 0
+  followRedirects: true
+  maxRedirects: 5
+
+examples:
+  - name: Update Copy
+    request:
+      url: "{{url}}/DraftOrder/Delete"
+      method: DELETE
+      headers:
+        - name: x-api-key
+          value: "{{apiKey}}"
+      body:
+        type: json
+        data: |-
+          {
+              "IdDonHangNhap": 10
+          }
+    response:
+      statusText: "200"
+      headers:
+        - name: Content-Type
+          value: application/json; charset=utf-8
+        - name: Date
+          value: Tue, 19 Nov 2024 09:34:57 GMT
+        - name: Server
+          value: Microsoft-IIS/10.0
+        - name: Content-Encoding
+          value: gzip
+        - name: Transfer-Encoding
+          value: chunked
+        - name: Vary
+          value: Accept-Encoding
+        - name: Request-Context
+          value: appId=cid-v1:7b29a27b-1ca8-4676-9588-932f5c4495e1
+        - name: X-Powered-By
+          value: ASP.NET
+      body:
+        type: json
+        data: |-
+          {
+              "message": "Delete Draft Order Failed",
+              "metadata": null,
+              "statusCodes": 1020
+          }
