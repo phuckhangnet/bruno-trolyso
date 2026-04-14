@@ -16,7 +16,7 @@ http:
           "TokenNofitication": "TokenNofitication",
           "DeviceId": "postman",
           "Account": "hauphvn",
-          "Password": "751914"
+          "Password": "641808"
       }
   auth: inherit
 

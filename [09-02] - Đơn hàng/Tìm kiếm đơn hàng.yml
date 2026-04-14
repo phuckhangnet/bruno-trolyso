@@ -24,7 +24,7 @@ http:
           "PageIndex": 1,
           "PageSize": 130,
           // "TrangThaiDonHang": [] // dathang , daxacnhan, chodonggoi, dainphieumuahang, dasoandu, cholayhang, dachuyennhavanchuyen,
-          "DangDoiKetQuaYeuCau": true// true , false || null
+          "DangDoiKetQuaYeuCau": false// true , false || null
       }
   auth: inherit
 

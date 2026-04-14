@@ -21,7 +21,7 @@ variables:
   - name: idCuaHang
     value: "null"
   - name: dateTimeNow
-    value: ""
+    value: '""'
   - name: ghtk_API_TOKEN
     value: 0c977030ce39b0ce15b13274be343c196d1f3bc3
   - name: ghtk_PARTNER_CODE

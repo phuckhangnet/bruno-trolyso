@@ -45,7 +45,7 @@ http:
               "ZipCode": "P. Tân Định, Q. 1, TP. Hồ Chí Minh, ZIP: 71008"
           },
           "ThongTinNguoiNhan": {
-              "DienThoai": "0947711080",
+              "DienThoai": "0967900801",
               "Email": "0947711080@2900000002.com",
               "Ho": "Phan nhận",
               "Ten": "Long nhận",
@@ -61,7 +61,7 @@ http:
               "DiaChiChiTiet": "111 Huỳnh tấn phát",
               "ZipCode": "P. Tân thuận tây, Q. 7, TP. Hồ Chí Minh, ZIP: 71008"
           },
-          "PhiShip": 11000, // Api danh mục nhà vận chuyển trong commons 
+          "PhiShip": 0, // Api danh mục nhà vận chuyển trong commons 
           "IdHinhThucThanhToan": 1, // Call api từ common
           "IdHinhThucNhanHang": 2, // Call api từ common
           "MaGiamGias": null,
@@ -69,31 +69,31 @@ http:
           "SoTienGiam": 0,
           "SoTienGiamTrenSanPham": 0,
           "GhiChu": "Giao trong ngay",
-          "Vat": 40000,
+          "Vat": 0,
           "DonHangLienHe": false, // true:  nếu giá bán là liên hệ
           "NgayDatHang": "{{dateTimeNow}}", //"2025-12-05 15:38:42.910",
           "IdNhaVanChuyen": 1,
-          "TongTienThanhToan":313400,
-          "TongDonGia":150000,
+          "TongTienThanhToan":80000,
+          "TongDonGia":60000,
           "Products": [
               {
-                  "IDSanPham": 1602,
-                  "GiaBan": 60000,
+                  "IDSanPham": 1631,
+                  "GiaBan": 30000,
                   "LaSanPhamLienHe":false,
-                  "DonGia": 1000,
+                  "DonGia": 20000,
                   "SoLuongDaChon": 2,
                   "ThoiGianBaoHanh": 24,
                   "GhiChuTang": "Tang kem qua"
-              },
-               {
-                  "IDSanPham": 1609,
-                  "GiaBan": 15000,
-                  "DonGia": 10000,
-                  "LaSanPhamLienHe":false,
-                  "SoLuongDaChon": 2,
-                  "ThoiGianBaoHanh": 1
-                  // "GhiChuTang": ""
               }
+      //          {
+      //             "IDSanPham": 1609,
+      //             "GiaBan": 15000,
+      //             "DonGia": 10000,
+      //             "LaSanPhamLienHe":false,
+      //             "SoLuongDaChon": 2,
+      //             "ThoiGianBaoHanh": 1
+      //             // "GhiChuTang": ""
+      //         }
           ],
           "DichVuDonHang": [
               {
@@ -104,7 +104,7 @@ http:
           ],
           "DichVuSanPham": [
               {
-                  "IdSanPham": 1602,
+                  "IdSanPham": 1631,
                   "GhiChuThem": "Have fun",
                   "DanhSach": [
                       {

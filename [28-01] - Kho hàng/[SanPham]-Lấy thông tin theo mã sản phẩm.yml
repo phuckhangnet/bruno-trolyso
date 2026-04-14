@@ -1,11 +1,11 @@
 info:
-  name: Lấy lịch sử yêu cầu huỷ đơn
+  name: "[SanPham]-Lấy thông tin theo mã sản phẩm"
   type: http
   seq: 10
 
 http:
   method: POST
-  url: "{{url}}/DonHang/LayLichSuYeuCauHuyDon/129"
+  url: "{{url}}/SanPham/LayThongTinSanPhamTheoMa"
   headers:
     - name: x-api-key
       value: "{{apiKey}}"
@@ -15,7 +15,10 @@ http:
       value: "{{idCuaHang}}"
   body:
     type: json
-    data: ""
+    data: |-
+      {
+         "MaSanPham":"SP_000000000001633"
+      }
   auth: inherit
 
 settings:

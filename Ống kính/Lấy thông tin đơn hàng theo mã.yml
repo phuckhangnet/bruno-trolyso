@@ -1,11 +1,11 @@
 info:
-  name: Lấy lịch sử yêu cầu huỷ đơn
+  name: "Lấy thông tin đơn hàng theo mã "
   type: http
-  seq: 10
+  seq: 3
 
 http:
   method: POST
-  url: "{{url}}/DonHang/LayLichSuYeuCauHuyDon/129"
+  url: "{{url}}/DonHang/LayThongTinDonHangTheoMa"
   headers:
     - name: x-api-key
       value: "{{apiKey}}"
@@ -15,7 +15,10 @@ http:
       value: "{{idCuaHang}}"
   body:
     type: json
-    data: ""
+    data: |
+      {
+          "MaDonHang": "BILL_000000000000129"
+      }
   auth: inherit
 
 settings:

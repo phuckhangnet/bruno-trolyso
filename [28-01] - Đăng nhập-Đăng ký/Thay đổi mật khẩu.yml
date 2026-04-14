@@ -17,7 +17,7 @@ http:
     type: json
     data: |-
       {
-          "MatKhauCu":"751914",
+          "MatKhauCu":"641808",
           "MatKhauMoi":"123456"
       }
   auth:
