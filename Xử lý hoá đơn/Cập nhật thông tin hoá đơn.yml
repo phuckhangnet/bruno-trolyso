@@ -17,7 +17,7 @@ http:
     type: json
     data: |-
       {
-          "IdDonHang": 4223,
+          "IdDonHang": 195,
           "HoTenNguoiMua": "",
           "TenCongTy": "Công Ty D 4 cap nhat",
           "LaCongTy": true,

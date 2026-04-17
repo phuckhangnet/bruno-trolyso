@@ -17,7 +17,7 @@ http:
     type: json
     data: |-
       {
-          "SearchText": "",
+          "SearchText": "KH_000000000001243",
           "Status": "ACTIVE",// LOCKED || ACTIVE
           "PageIndex": 1,
           "PageSize": 100,

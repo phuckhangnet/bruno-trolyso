@@ -19,24 +19,30 @@ http:
       - name: TenQuocGia
         type: text
         value: Việt Nam
+        disabled: true
       - name: MaQuocGia
         type: text
         value: VN
+        disabled: true
       - name: MaTinhThanh
         type: text
         value: "71"
+        disabled: true
       - name: TenTinhThanh
         type: text
         value: Thành phố Hồ Chí Minh
+        disabled: true
       - name: DiaChiChiTiet
         type: text
         value: 11 Vạn Kiếp, Bình Thạnh, Hồ Chí Minh
-      - name: MaHopDong
+        disabled: true
+      - name: LoaiHopDong
         type: text
         value: chinh_thuc
       - name: CCCD
         type: text
         value: "000000000001"
+        disabled: true
       - name: GhiChu
         type: text
         value: ""
@@ -44,26 +50,34 @@ http:
       - name: MaViTriCongViec
         type: text
         value: quan_tri_vien_he_thong
-        description: "NameCode: từ {{url}}/Permission/EmployeeRole/GetAll"
+        disabled: true
       - name: MaViTriCongViec
         type: text
         value: nhan_vien_ke_toan
+        disabled: true
       - name: Ho
         type: text
         value: Phan
+        disabled: true
       - name: Ten
         type: text
         value: Nam
+        disabled: true
       - name: DienThoai
         type: text
         value: "0000000003"
+        disabled: true
       - name: Email
         type: text
         value: phannam@phuckhangnet.com
+        disabled: true
       - name: GioiTinh
         type: text
         value: nam
-        description: nam | nữ
+        disabled: true
+      - name: MaBuuChinh
+        type: text
+        value: "P. Bình Thuận, Quận 7, Hồ Chí Minh, ZIP: 71000"
   auth: inherit
 
 settings:

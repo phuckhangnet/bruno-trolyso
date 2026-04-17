@@ -15,9 +15,9 @@ http:
       value: "{{idCuaHang}}"
   body:
     type: json
-    data: |
+    data: |-
       {
-          "MaDonHang": "BILL_000000000000129"
+        "MaDonHang": "BILL_0000000000175" 
       }
   auth: inherit
 
