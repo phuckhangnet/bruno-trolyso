@@ -1,5 +1,5 @@
 info:
-  name: Lấy danh sách hoá đơn cần xuất
+  name: "Lấy ds đơn hàng xuất hóa đơn tạm "
   type: http
   seq: 4
 

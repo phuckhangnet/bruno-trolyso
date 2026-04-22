@@ -1,7 +1,7 @@
 info:
-  name: Xuất hoá đơn
+  name: Thêm vào danh sách hóa đơn tạm
   type: http
-  seq: 10
+  seq: 16
 
 http:
   method: POST
@@ -18,7 +18,7 @@ http:
     data: |-
       [
           {
-              "IdDonHang": 4317,
+              "IdDonHang": 1,
               // "HoTenNguoiMua": "",
               "TenCongTy":"Công Ty FF",
               "LaCongTy": true,
