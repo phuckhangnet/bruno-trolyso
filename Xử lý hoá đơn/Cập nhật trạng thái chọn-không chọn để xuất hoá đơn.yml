@@ -17,8 +17,8 @@ http:
     type: json
     data: |-
       {
-          "OrderId":1,
-          "NewStatus":"KHONG_CHON_XUAT_HOA_DON"  // CHON_XUAT_HOA_DON
+          "OrderId":11,
+          "NewStatus":"CHON_XUAT_HOA_DON"  // CHON_XUAT_HOA_DON
       }
   auth:
     type: bearer

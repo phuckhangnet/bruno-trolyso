@@ -18,14 +18,14 @@ http:
     data: |-
       [
           {
-              "IdDonHang": 4317,
+              "IdDonHang": 11
               // "HoTenNguoiMua": "",
-              "TenCongTy":"Công Ty FF",
-              "LaCongTy": true,
-              "DiaChi": "111 Trần hưng đạo, Cầu Kho,Hồ Chí Minh",
-              "DienThoai": "0967900801",
-              "MaSoThue": "0967900801",
-              "Email": "hauphvn@gmail.com"
+      //         "TenCongTy":"Công Ty FF",
+      //         "LaCongTy": true,
+      //         "DiaChi": "111 Trần hưng đạo, Cầu Kho,Hồ Chí Minh",
+      //         "DienThoai": "0967900801",
+      //         "MaSoThue": "0967900801",
+      //         "Email": "hauphvn@gmail.com"
           }
       ]
   auth:

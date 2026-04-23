@@ -17,16 +17,16 @@ http:
     type: json
     data: |-
       {
-          "YeuCauXuatHoaDon": true,
-          "ThongTinHoaDon": {
-              "HoTenNguoiMua": "Pham van A",
-              "MaSoThue": "11111111111119",
-              "Email": "hauphvn@gmail.com",
-              "DienThoai": "0967900801",
-              "DiaChi": "111 Lac Long Quan, Tan Phu, Ho Chi Minh",
-              "TenCongTy": "Cong ty TNHH Thanh Long",
-              "LaCongTy": true
-          },
+      //     "YeuCauXuatHoaDon": true,
+      //     "ThongTinHoaDon": {
+      //         "HoTenNguoiMua": "Pham van C",
+      //         "MaSoThue": "11111111111119",
+      //         "Email": "hauphvn@gmail.com",
+      //         "DienThoai": "0967900801",
+      //         "DiaChi": "111 Lac Long Quan, Tan Phu, Ho Chi Minh",
+      //         "TenCongTy": "Cong ty TNHH Thanh C",
+      //         "LaCongTy": true
+      //     },
           "ThongTinKhachHang": {
               "DienThoai": "0967900801",
               "Email": "hauphvn@gmail.com",

@@ -1,11 +1,11 @@
 info:
-  name: Lấy hoá đơn bán theo ngày
+  name: Xóa hóa đơn tạm
   type: http
-  seq: 1
+  seq: 17
 
 http:
   method: POST
-  url: "{{url}}/DataManagement/GetOrderList"
+  url: "{{url}}/DataManagement/CancelTemporaryInvoice"
   headers:
     - name: x-api-key
       value: "{{apiKey}}"
@@ -17,12 +17,7 @@ http:
     type: json
     data: |-
       {
-          "SearchText": "",
-          "PageNumber": 1,
-          "PageSize": 10,
-          "Status": "", // KHONG_CHON_XUAT_HOA_DON | CHON_XUAT_HOA_DON
-          "FromDate": "2026-04-07",
-          "ToDate": "2026-04-30"
+        "IdHoaDon": 8
       }
   auth:
     type: bearer

@@ -17,16 +17,16 @@ http:
     type: json
     data: |-
       {
-          // "YeuCauXuatHoaDon": true,
-          // "ThongTinHoaDon": {
-          //     "HoTenNguoiMua": "Pham van A",
-          //     "MaSoThue": "11111111111119",
-          //     "Email": "hauphvn@gmail.com",
-          //     "DienThoai": "0967900801",
-          //     "DiaChi": "111 Lac Long Quan, Tan Phu, Ho Chi Minh",
-          //     "TenCongTy": "Cong ty TNHH Thanh Long",
-          //     "LaCongTy": true
-          // },
+          "YeuCauXuatHoaDon": true,
+          "ThongTinHoaDon": {
+              "HoTenNguoiMua": "Pham van A",
+              "MaSoThue": "11111111111119",
+              "Email": "hauphvn@gmail.com",
+              "DienThoai": "0967900801",
+              "DiaChi": "111 Lac Long Quan, Tan Phu, Ho Chi Minh",
+              "TenCongTy": "Cong ty TNHH Thanh Long",
+              "LaCongTy": true
+          },
           "ThongTinKhachHang": {
               "DienThoai": "0967900801",
               "Email": "khachhanghau@gmail.com",
@@ -69,17 +69,17 @@ http:
           "SoTienGiam": 0,
           "SoTienGiamTrenSanPham": 0,
           "GhiChu": "Giao trong ngay",
-          "Vat": 40000,
+          "Vat": 9000,
           "DonHangLienHe": false, // true:  nếu giá bán là liên hệ
           "NgayDatHang": "{{dateTimeNow}}", //"2025-12-05 15:38:42.910",
           "IdNhaVanChuyen": 17,
-          "TongTienThanhToan":302400,
+          "TongTienThanhToan":92000,
 
           "Products": [
               {
-                  "IDSanPham": 1602,
-                  "GiaBan": 60000,
-                  "DonGia": 1000,
+                  "IDSanPham": 1610,
+                  "GiaBan": 52000,
+                  "DonGia": 45000,
                   "SoLuongDaChon": 2,
                   "ThoiGianBaoHanh": 24,
                   "GhiChuTang": "Tang kem qua"
@@ -94,7 +94,7 @@ http:
           ],
           "DichVuSanPham": [
               {
-                  "IdSanPham": 1597,
+                  "IdSanPham": 1610,
                   "GhiChuThem": "Have fun",
                   "DanhSach": [
                       {
